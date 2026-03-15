@@ -5,14 +5,10 @@
 
 // bilinear interpolation into a polar field
 // this is the exact function the real project will use
-__device__ float lookup_field(
-    float *field, int n_r, int n_theta, float r_max,
-    float dx, float dy)
-{
+__device__ float lookup_field(float *field, int n_r, int n_theta, float r_max, float dx, float dy) {
     float r = sqrtf(dx * dx + dy * dy);
     float theta = atan2f(dy, dx);
-    if (theta < 0.0f)
-        theta += 6.2832f;
+    if (theta < 0.0f) theta += 6.2832f;
 
     float r_idx = (r / r_max) * (n_r - 1);
     float t_idx = (theta / 6.2832f) * n_theta;
@@ -28,14 +24,7 @@ __device__ float lookup_field(
     return field[r0 * n_theta + t0] * (1.0f - rf) * (1.0f - tf) + field[r1 * n_theta + t0] * (rf) * (1.0f - tf) + field[r0 * n_theta + t1] * (1.0f - rf) * (tf) + field[r1 * n_theta + t1] * (rf) * (tf);
 }
 
-__global__ void benchmark_kernel(
-    int n_iterations,
-    float *field_data,
-    int n_r,
-    int n_theta,
-    float r_max,
-    ChainResult *results)
-{
+__global__ void benchmark_kernel(int n_iterations, float *field_data, int n_r, int n_theta, float r_max, ChainResult *results) {
     int id = blockIdx.x * blockDim.x + threadIdx.x;
 
     // each chain gets its own rng
