@@ -1,0 +1,85 @@
+{
+    "n_r": 32,
+    "n_theta": 64,
+    "r_max": 60,
+    "index_offset": 20.0,
+    "finger_order": [
+        "pinky",
+        "ring",
+        "middle",
+        "index",
+        "thumb"
+    ],
+    "finger_data": [
+        {
+            "hand": "left",
+            "finger": "pinky",
+            "x": -35.44010857414811,
+            "y": 11.98403580032009,
+            "file": "left_pinky.npy"
+        },
+        {
+            "hand": "left",
+            "finger": "ring",
+            "x": -29.019839057214732,
+            "y": 13.748939299978044,
+            "file": "left_ring.npy"
+        },
+        {
+            "hand": "left",
+            "finger": "middle",
+            "x": -24.045272590295216,
+            "y": 13.878749280133135,
+            "file": "left_middle.npy"
+        },
+        {
+            "hand": "left",
+            "finger": "index",
+            "x": -20.0,
+            "y": 10.592386542665714,
+            "file": "left_index.npy"
+        },
+        {
+            "hand": "left",
+            "finger": "thumb",
+            "x": -20.0,
+            "y": 0.0,
+            "file": "left_thumb.npy"
+        },
+        {
+            "hand": "right",
+            "finger": "pinky",
+            "x": 33.40674605960915,
+            "y": 14.741536101278394,
+            "file": "right_pinky.npy"
+        },
+        {
+            "hand": "right",
+            "finger": "ring",
+            "x": 28.174767020957045,
+            "y": 17.18483866944739,
+            "file": "right_ring.npy"
+        },
+        {
+            "hand": "right",
+            "finger": "middle",
+            "x": 23.278860113938332,
+            "y": 16.71657460644822,
+            "file": "right_middle.npy"
+        },
+        {
+            "hand": "right",
+            "finger": "index",
+            "x": 20.0,
+            "y": 12.702172058077892,
+            "file": "right_index.npy"
+        },
+        {
+            "hand": "right",
+            "finger": "thumb",
+            "x": 20.0,
+            "y": 0.0,
+            "file": "right_thumb.npy"
+        }
+    ]
+}
